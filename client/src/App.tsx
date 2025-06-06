@@ -1,10 +1,10 @@
 import "./App.css";
-import About from "./components/About.tsx";
-import { Experience } from "./components/Experience.tsx";
-import Footer from "./components/Footer.tsx";
+import About from "./components/About/About.tsx";
+import { Experience } from "./components/Experience/Experience.tsx";
+import Footer from "./components/Footer/Footer.tsx";
 import { Header } from './components/Header/Header.tsx'
-import Projects from "./components/Projects.tsx";
-import Writing from "./components/Writing.tsx";
+import Projects from "./components/Projects/Projects.tsx";
+import Writing from "./components/Writing/Writing.tsx";
 
 function App() {
   return (

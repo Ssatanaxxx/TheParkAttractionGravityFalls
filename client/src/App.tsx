@@ -1,4 +1,8 @@
 import "./App.css";
+import React from 'react'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import Sidebar from "./components/Sidebar";
 import About from "./components/About/About.tsx";
 import { Experience } from "./components/Experience/Experience.tsx";
 import Footer from "./components/Footer/Footer.tsx";
@@ -6,9 +10,12 @@ import { Header } from './components/Header/Header.tsx'
 import Projects from "./components/Projects/Projects.tsx";
 import Writing from "./components/Writing/Writing.tsx";
 
+library.add(fas);
+
 function App() {
   return (
     <div className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
+      <Sidebar color='light' />
       <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"></div>
       <div className="lg:flex lg:justify-between lg:gap-4 mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
         <Header />

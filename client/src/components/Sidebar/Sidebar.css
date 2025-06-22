@@ -1,0 +1,201 @@
+/* Основные стили сайдбара */
+.sidebar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(135deg, #0f1a20 0%, #1a2a32 100%);
+    border-right: 1px solid #3d4e5d;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar.hovered:not(.open) {
+    left: -280px;
+}
+
+.sidebar-content {
+    padding: 20px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Кнопка переключения */
+.toggle-btn {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #2a3b4a 0%, #1a2a32 100%);
+    border: 1px solid #5d7b94;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    color: #e0e0e0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.toggle-btn:hover {
+    background: linear-gradient(135deg, #3a4d5e 0%, #2a3b4a 100%);
+    transform: scale(1.1);
+    color: #f0f0f0;
+}
+
+.toggle-btn.open {
+    left: 320px;
+}
+
+/* Декоративные элементы */
+.mystery-symbol {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    color: #8aadc1;
+    animation: glow 2s infinite alternate;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.sidebar-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100
+}
+
+/* Стили для нового контента */
+.park-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  text-shadow: 0 0 5px rgba(94, 156, 189, 0.7);
+}
+
+.park-header h2 {
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.park-header p {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #5d7b94, transparent);
+  margin: 15px 0;
+}
+
+/* Меню аттракционов */
+.attractions-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.attractions-menu li {
+  padding: 12px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  position: relative;
+  background: rgba(26, 42, 58, 0.5);
+}
+
+.attractions-menu li:hover {
+  background: rgba(58, 77, 94, 0.5);
+}
+
+.attractions-menu li.active {
+  background: linear-gradient(to right, #3a4d5e, #2a3b4a);
+}
+
+.attraction-icon {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.attraction-name {
+  flex-grow: 1;
+}
+
+.secret-badge {
+  background: #8a1a1a;
+  color: white;
+  font-size: 0.7em;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.attractions-menu li.secret {
+  border-left: 3px solid #8a1a1a;
+}
+
+/* Секция с загадкой */
+.riddle-section {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(26, 42, 58, 0.3);
+  border-radius: 5px;
+  border: 1px dashed #5d7b94;
+}
+
+.riddle-section h3 {
+  margin-top: 0;
+  color: #8aadc1;
+}
+
+.riddle-button {
+  background: #2a3b4a;
+  color: #e0e0e0;
+  border: 1px solid #5d7b94;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.riddle-button:hover {
+  background: #3a4d5e;
+}
+
+/* Колесо шифра */
+.cipher-wheel {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: url('cipher-wheel.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.sidebar:hover .cipher-wheel {
+  opacity: 0.5;
+  transform: rotate(10deg);
+}

@@ -1,0 +1,191 @@
+/* Стили для кнопки ТАРДИС */
+.tardis-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.tardis-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(94, 156, 189, 0.7));
+  transition: transform 0.5s ease;
+}
+
+.tardis-image.spinning {
+  transform: rotate(720deg) scale(1.2);
+  filter: drop-shadow(0 0 15px #8aadc1);
+}
+
+.tardis-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(94, 156, 189, 0.8), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tardis-button:hover .tardis-glow {
+  opacity: 0.6;
+}
+
+/* Стили модального окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.mystical-modal {
+  background: linear-gradient(135deg, #0f1a20 0%, #1a2a32 100%);
+  border: 1px solid #3d4e5d;
+  border-radius: 10px;
+  width: 350px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(94, 156, 189, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3d4e5d;
+  padding-bottom: 10px;
+}
+
+.modal-header h3 {
+  color: #8aadc1;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.mystical-input {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.mystical-input label {
+  display: block;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+}
+
+.mystical-input input, 
+.mystical-input select {
+  width: 100%;
+  padding: 8px;
+  background: rgba(26, 42, 58, 0.7);
+  border: 1px solid #3d4e5d;
+  border-radius: 5px;
+  color: #e0e0e0;
+}
+
+.time-vortex {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: url('vortex.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.5;
+}
+
+.secret-warning {
+  color: #c18a8a;
+  font-size: 0.8em;
+  margin-top: 5px;
+  animation: pulse 2s infinite;
+}
+
+.price-calculation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  font-size: 1.2em;
+  color: #e0e0e0;
+  position: relative;
+}
+
+.cipher-wheel-small {
+  width: 30px;
+  height: 30px;
+  background: url('cipher-wheel.png') no-repeat center;
+  background-size: contain;
+  margin-right: 10px;
+  opacity: 0.7;
+}
+
+.buy-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #3a4d5e, #2a3b4a);
+  border: none;
+  border-radius: 5px;
+  color: #e0e0e0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.buy-button:hover {
+  background: linear-gradient(to right, #5d7b94, #3a4d5e);
+  box-shadow: 0 0 10px rgba(94, 156, 189, 0.5);
+}
+
+.buy-button.disabled {
+  background: #2a3b4a;
+  cursor: not-allowed;
+}
+
+.mystical-footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #8aadc1;
+}
+
+.alien-symbols {
+  margin-top: 5px;
+  letter-spacing: 5px;
+  font-size: 1.2em;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
